@@ -38,7 +38,7 @@ main {
     ;
 }
 
-main>*, #projects>*{
+main>*, #projects>*, #projectstwo>*{
     box-shadow: 0px 15px 20px 0 rgb(222, 222, 222);
     background-color: var(--backgrounddiv);
     border-radius: 12px;
@@ -328,7 +328,7 @@ main>*, #projects>*{
 
 
 
-#projects {
+#projects, #projectstwo {
     display: grid;
     grid-template-columns: repeat(auto-fill, 270px);
     justify-content: center;
@@ -336,8 +336,9 @@ main>*, #projects>*{
     max-width: 885px;
     height: auto;
     margin: auto;
+    margin-top: 20px;
 }
-#projects>div {
+#projects>div, #projectstwo>div {
     transition: 1s;
     height: 465px;
     width: 270px;
@@ -346,37 +347,37 @@ main>*, #projects>*{
     flex-direction: column;
     justify-content: space-between;
 }
-#projects>div:hover {
+#projects>div:hover, #projectstwo>div:hover {
     transition: ease-in 0.5s;
     transform: scale(1.05);
 }
-#projects div div:first-child img {
+#projects div div:first-child img, #projectstwo div div:first-child img {
     width: 100%;
 }
-#projects div div:first-child p {
+#projects div div:first-child p, #projectstwo div div:first-child p {
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
     color: var(--grey1);
     margin-top: 24px;
 }
-#projects div div h1 {
+#projects div div h1, #projectstwo div div h1  {
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
     color: #333333;
 }
-#projects div div p {
+#projects div div p, #projectstwo div div p {
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
     color: var(--grey2);
 }
-#projects div div:last-child {
+#projects div div:last-child, #projectstwo div div:last-child {
     display: flex;
     justify-content: space-between;
 }
-#projects div div:last-child a:first-child {
+#projects div div:last-child a:first-child, #projectstwo div div:last-child a:first-child {
     transition: 1s;
     color: var(--backgrounddiv);
     border: var(--green) 1.5px solid;
@@ -385,7 +386,7 @@ main>*, #projects>*{
     text-align: center;
     border-radius: 12px;
 }
-#projects div div:last-child a:last-child {
+#projects div div:last-child a:last-child, #projectstwo div div:last-child a:last-child {
     transition: 1s;
     color: var(--green);
     border: var(--green) 1.5px solid;
@@ -405,7 +406,6 @@ main>*, #projects>*{
 }
 #footer> div {
     display: flex;
-    width: 22%;
     align-items: center;
     line-height: 0;
     justify-content: space-between;
@@ -421,11 +421,12 @@ main>*, #projects>*{
     line-height: 0;
     border: 1.75px solid var(--green);
     border-radius: 4px;
-    height: 100%;
-    width: 20%;
+    height: 30px;
+    width: 30px;
     color: var(--green);
+    margin: 10px;
 }
-#footer div a:hover, #projects div div:last-child a:last-child:hover {
+#footer div a:hover, #projects div div:last-child a:last-child:hover, #projectstwo div div:last-child a:last-child:hover {
     transition: 0.5s;
     background-color: var(--green);
     color: var(--backgrounddiv);
@@ -441,15 +442,12 @@ main>*, #projects>*{
     background-color: var(--background);
     color: var(--green);
 }   
-#projects div div:last-child a:first-child:hover  {
+#projects div div:last-child a:first-child:hover, #projectstwo div div:last-child a:first-child:hover  {
     transition: 0.5s;
     background-color: var(--backgrounddiv);
     color: var(--green);
 }
 
-.pageinactive {
-    display: none;
-}
 
 
 a {
