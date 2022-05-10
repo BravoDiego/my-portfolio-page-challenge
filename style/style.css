@@ -1,660 +1,467 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto&display=swap');
 
-* {
-    box-sizing: border-box;
-    padding: 0;
+:root {
+    --backgrounddiv: #FFFFFF;
+    --background: #F2F2F2;
+    --green: #2acd73;
+    --grey1: #4F4F4F;
+    --grey2: #828282;
+}
+
+*, :before, ::after {
     margin: 0;
-    
-    
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Montserrat';
-    background-color: #F2F2F2;
+    list-style: none;
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: var(--background);
+}
+
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding-top: 70px;
+    width: 885px;
+    height: auto;
+    margin: 75px auto;
+    display: grid;
+    grid-template-columns: 4.2fr 6fr;
+    grid-template-rows: 1.8fr 1.6fr 1.3fr 4.5fr 0.8fr;
+    gap: 2.5%;
+    grid-template-areas: 
+    "profil profil"
+    "competence blog"
+    "hobbie blog"
+    "hobbie experience"
+    "filter filter"
+    ;
 }
 
-main .div {
+main>*, #projects>*{
     box-shadow: 0px 15px 20px 0 rgb(222, 222, 222);
-    margin-bottom: 2.5%;
-}
-
-footer a {
-    background-color: #F2F2F2;
-}
-
-main div, h1, h2, p, ul, li, a, span {
+    background-color: var(--backgrounddiv);
     border-radius: 12px;
-    background-color: #FFFFFF;
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: #2acd73;
-}
-
-#main {
-    width: 70%;
-    background-color: #F2F2F2;
-    display: flex;
-    justify-content: space-between;
-}
-
-#left {
-    width: 40%;
-    background-color: #F2F2F2;
-}
-
-#rigth {
-    width: 57%;
-    display: flex;
-    flex-direction: column;
-    background-color: #F2F2F2;
-}
-
-#profile {
-    width: 70%;
-    padding: 1.5%;
-
-    display: flex;
-}
-
-#profile img {
-    width: 30%;
-    border-radius: 12px;
-}
-
-#mail, #num {
-    color: #4F4F4F;
-    display: flex;
-    align-items: center;
-    font-size: 1em;
-}
-
-#description {
-    margin-left: 35px;
-    width: 100%;
-}
-
-#description h1 {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 29px;
-
-    color: #4F4F4F;
-}
-
-#description h2 {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
-    color: #828282;
-}
-
-#infoprofile ion-icon {
-    color: #4F4F4F;
-    background-color: #ffffff;
-    font-size: 1.5em;
-    margin-right: 2.5%;
-}
-
-#descriptionprofile {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
-    color: #828282;
-
-    margin-top: 40px;
-}
-
-#nom {
-    display: flex;
-    justify-content: space-between;
-}
-
-#competence {
-    background-color: #FFFFFF;
-
     padding: 25px;
 }
 
+#profil {
+    grid-area: profil;
+    margin-bottom: 5px;
+    display: flex;
+}
+#profil img {
+    width: 255px;
+    height: 255px;
+    border-radius: 12px;
+}
+#profil #blocinfo {
+    display: flex;
+    justify-content: space-between;
+}
+#profil #textinfo {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: var(--grey2);
+}
+#profil #information h2 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--grey1);
+}
+#profil #information h1, #profil #information p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--grey2);
+}
+#profil #information p {
+    margin: 20px 0;
+    width: 200%;
+}
+#profil #informationperso div {
+    display: flex;
+    line-height: 0;
+    align-items: center;
+}
+#profil #informationperso div{
+    color: var(--grey1);
+    font-size: 1em;
+    margin: 5px 0;
+}
+#profil #informationperso ion-icon {
+    font-size: 1.5em;
+    margin: 0 10px 0;
+}
+
+
+
+
+
+#competence {
+    grid-area: competence;
+}
 #competence h1 {
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
     text-transform: uppercase;
-    color: #4F4F4F;
+    color: var(--grey1);
 }
-
-li {
+#competence ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+}
+#competence li{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 18px;
-
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 20px;
-
-    color: #4F4F4F;
+    line-height: 0;
+    color: var(--grey1);
 }
-
-li div {
+#competence li div {
     background-color: #C4C4C4;
-    width: 65%;
+    width: 60%;
     height: 8px;
     border-radius: 4px;
     border: none;
 }
-
-li div hr {
-    background-color: #2acd73;
+#competence li div hr {
+    background-color: var(--green);
     height: 8px;
     border-radius: 4px;
     border: none;
 }
-
-#htmlhr1 {
+#competence li:first-child div hr {
     width: 95%;
 }
-
-#htmlhr2 {
+#competence li:nth-child(2) div hr {
     width: 90%;
 }
-
-#htmlhr3 {
+#competence li:nth-child(3) div hr {
+    width: 70%;
+}
+#competence li:nth-child(4) div hr {
     width: 60%;
 }
-
-#htmlhr4 {
-    width: 80%;
+#competence li:nth-child(5) div hr {
+    width: 55%;
+}
+#competence li:last-child div hr {
+    width: 85%;
 }
 
-#htmlhr5 {
-    width: 70%;
-}
 
-#top {
+
+#blog {
+    grid-area: blog;
+    padding: 25px 0 25px 25px;
     display: flex;
-    width: 70%;
-    background-color: #F2F2F2;
+    flex-direction: column;
     justify-content: space-between;
 }
-
-#blogcss {
-    padding: 20px;
-}
-
-#bloginfo {
+#blog #topblog {
     display: flex;
-    justify-content: space-between;
 }
-
-#bloginfo1 h2{
-    font-family: 'Montserrat';
-    font-style: normal;
+#blog #topblog h2 {
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
     color: #E0E0E0;
-    margin-bottom: 20px;
 }
-
-#bloginfo1 h1 {
-    font-family: 'Montserrat';
-    font-style: normal;
+#blog #topblog h1 {
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
     color: #333333;
-}
-
-img[src="src/css_photo.jpg"] {
-    width: 60%;
-    border-radius: 12px 0px 0px 12px;
-    position: relative;
-    bottom: -20px;
-    left: 20px;
-    margin-bottom: 60px;
-}
-
-#blogcss p {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    color: #828282;
-    margin-bottom: 60px;
-}
-
-#experience {
-    padding: 20px;
-    margin-top: 5%;
-}
-
-#experience div {
     margin-top: 20px;
 }
-
-#experience img {
-    border-radius: 12px;
+#blog #topblog img {
+    width: 58%;
+    border-radius: 12px 0px 0px 12px;
+    margin-left: 10px;
 }
-
-#experience h1 {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 29px;
-    color: #4F4F4F;
-}
-
-#devchallenge, #friend, #techno {
-    display: flex;
-    align-items: center;
-}
-
-#devchallenge img {
-    height: 30%;
-    margin-right: 5%;
-    margin-left: 2%;
-    position: relative;
-    top: 35px;
-}
-
-#descriptiondevchallenge h2, #descriptionfriend h2, #descriptiontechno h2 {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    color: #828282;
-    margin-top: 59px;
-}
-
-#descriptiondevchallenge h1, #descriptionfriend h1, #descriptiontechno h1 {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    color: #333333;
-    margin-top: 15px;
-}
-
-img[src="src/saint-guilhem.jpg"] {
-    width: 30%;
-    position: relative;
-    top: 35px;
-    margin-right: 5%;
-    margin-left: 2%;
-}
-
-#descriptiondevchallenge p, #descriptionfriend p, #descriptiontechno p {
-    font-family: 'Montserrat';
-    font-style: normal;
+#blog p {
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-    color: #828282;
-    margin-top: 10px;
+    color: var(--grey2);
+}
+#blog a {
+    text-decoration: none;
+    color: var(--green);
 }
 
 
-#friend ion-icon {
-    font-size: 100px;
-    background-color: #FFFFFF;
-    margin-right: 5%;
-    margin-left: 2%;
-    position: relative;
-    top: 35px;
-}
 
 #hobbie {
-    padding: 20px;
-    margin-top: 5%;
+    grid-area: hobbie;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
-#hobbie h1 {
-    font-family: 'Montserrat';
-    font-style: normal;
+#hobbie div h1 {
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
-    color: #4F4F4F;
-    margin-bottom: 25px;
+    color: var(--grey1);
 }
-
-#hobbie div img {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 25px;
-}
-
 #hobbie div h2 {
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
     color: #333333;
     margin-bottom: 10px;
 }
-
-#hobbie div p:not(#hobbie #jeu p) {
-    font-family: 'Montserrat';
-    font-style: normal;
+#hobbie div p {
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-    color: #828282;
-    margin-bottom: 35px;
+    color: var(--grey2);
 }
-
-#projectsnumber {
-    width: 70%;
-    padding: 20px;
-    margin-top: 2%;
-}
-
-#projectsnumber h1 {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
-    color: #4F4F4F;
-}
-
-#button {
-    display: flex;
-}
-
-#button div {
-    margin-right: 3%;
-    border-radius: 12px;
-    padding: 8px 22px 8px 22px;
-    margin-top: 24px;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-#responsiveproject {
-    transition: 1s;
-    background-color: #2acd73;
-    border: 1.5px solid #2acd73;
-    color: #FFFFFF;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-}
-
-#responsiveproject:hover {
-    transition: 0.5s;
-    background-color: #FFFFFF;
-    color: #2acd73;
-    border: 1.5px solid #2acd73;
-}
-
-#js {
-    transition: 1s;
-    border: 1.5px solid #2acd73;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    color: #2acd73;
-}
-
-#js:hover {
-    transition: 0.5s;
-    background-color: #2acd73;
-    color: white;
-}
-
-#projects, #projects2 {
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
-    background-color: #F2F2F2;
-}
-
-#projects div, #projects2 div {
-    width: 30%;
-    padding: 18px;
-}
-
-#projects div img, #projects2 div img {
+#hobbie>div img{
     width: 100%;
     border-radius: 12px;
 }
 
-#projects div h2, #projects2 div h2 {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    color: #4F4F4F;
-    margin-top: 24px;
-}
 
-#projects div h1, #projects2 div h1 {
-    font-family: 'Montserrat';
-    font-style: normal;
+#experience {
+    grid-area: experience;
+}
+#experience {
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
-    color: #333333;
-    margin-top: 25px;
+    color: var(--grey1);
 }
-
-#projects div p, #projects2 div p {
-    font-family: 'Montserrat';
-    font-style: normal;
+#experience #projectexperience {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+#experience #projectexperience > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#experience #projectexperience img {
+    margin-right: 5%;
+    margin-left: 2%;
+}
+#experience #projectexperience div div h2 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--grey2);
+}
+#experience #projectexperience div div h1 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #333333;
+    margin: 5px 0 8px 0;
+}
+#experience #projectexperience div div p {
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-    color: #828282;
-    margin-top: 18px;
+    color: var(--grey2);
+}
+#experience #projectexperience #dev img {
+    width: 15%;
 }
 
-img[alt="404 page"] {
-    margin-bottom: 45px;
-}
 
-#ademocode {
+
+
+
+#filter {
+    grid-area: filter;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
-
-.demo{
+#filter #button #responsive {
+    border-radius: 12px;
     transition: 1s;
-    color: white;
-    background-color: #2acd73;
-    border: #2acd73 1.5px solid;
-    padding: 8%;
-    display: flex;
-    align-items: center;
+    background-color: var(--green);
+    border: 1.5px solid var(--green);
+    color: var(--backgrounddiv);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 8px 22px 8px 22px;
+}
+#filter #button #vanilla {
+    border-radius: 12px;
+    transition: 1s;
+    background-color: var(--backgrounddiv);
+    border: 1.5px solid var(--green);
+    color: var(--green);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 8px 22px 8px 22px;
+}
+#filter #button #responsive:hover {
+    background-color: var(--backgrounddiv);
+    color: var(--green);
+}
+#filter #button #vanilla:hover {
+    background-color: var(--green);
+    color: var(--backgrounddiv);
+}
+
+
+
+#projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 270px);
     justify-content: center;
-    line-height: 0;
-    margin-right: 0;
+    gap: 30px;
+    max-width: 885px;
+    height: auto;
+    margin: auto;
 }
-
-.demo:hover {
-    transition: 0.5s;
-    background-color: #FFFFFF;
-    color: #2acd73;
-}
-
-.code {
+#projects>div {
     transition: 1s;
-    border: #2acd73 1.5px solid;
-    padding: 25px;
+    height: 465px;
+    width: 270px;
+    padding: 20px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 0;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
-.code:hover {
-    transition: 0.5s;
-    background-color: #2acd73;
-    color: white;
-}
-
-#nav {
-    display: flex;
-    justify-content: flex-end;
-    background-color: #F2F2F2;
-    color: #2acd73;
-    margin-top: 36px;
-    width: 120%;
-}
-
-#nav div {
-    display: flex;
-    align-items: center;
-    line-height: 0;
-}
-
-#number a, #number div {
-    padding: 20px 18px 20px 18px;
-    border-radius: 4px;
-    border: #2acd73 1.5px solid;
-    margin-right: 12px;
-    margin-left: 12px;
-}
-
-#number {
-    background-color: #F2F2F2;
-}
-
-#next, #back {
-    border: #2acd73 1.5px solid;
-    border-radius: 4px;
-    padding: 12px;
-    margin-right: 12px;
-    margin-left: 12px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #F2F2F2;
-    cursor: pointer;
-}
-
-#footer {
-    width: 70%;
-    background-color: #F2F2F2;
-}
-
-html body #footer #nav #number a[href="#mainpratique"]{
-    transition: 1s;
-    color: #F2F2F2;
-    background-color: #2acd73;
-    cursor: pointer;
-}
-
-#un:hover {
-    transition: 0.5s;
-    background-color: #F2F2F2;
-    color: #2acd73;
-}
-
-#deux {
-    transition: 1s;
-    background-color: #F2F2F2;
-    cursor: pointer;
-}
-
-#deux:hover {
-    transition: 0.5s;
-    background-color: #2acd73;
-    color: white;
-}
-
-.div2 {
-    transition: ease-out 1s;
-    transform: scale(1);
-    box-shadow: 0px 15px 20px 0 rgb(222, 222, 222);
-}
-
-.div2:hover {
+#projects>div:hover {
     transition: ease-in 0.5s;
     transform: scale(1.05);
 }
-
-#una {
-    color: #F2F2F2;
+#projects div div:first-child img {
+    width: 100%;
 }
-
-.ABC {
-    padding-top: 16%;
+#projects div div:first-child p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--grey1);
+    margin-top: 24px;
 }
-
-.ABCD {
-    padding-top: 30%;
+#projects div div h1 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #333333;
 }
-
-
-#page2 {
+#projects div div p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--grey2);
+}
+#projects div div:last-child {
     display: flex;
-    align-items: center;    
+    justify-content: space-between;
+}
+#projects div div:last-child a:first-child {
+    transition: 1s;
+    color: var(--backgrounddiv);
+    border: var(--green) 1.5px solid;
+    background-color: var(--green);
+    padding: 8%;
+    text-align: center;
+    border-radius: 12px;
+}
+#projects div div:last-child a:last-child {
+    transition: 1s;
+    color: var(--green);
+    border: var(--green) 1.5px solid;
+    background-color: var(--backgrounddiv);
+    padding: 8%;
+    text-align: center;
+    border-radius: 12px;
+}
+
+
+
+#footer {
+    width: 70%;
+    margin: 40px auto -20px auto;
+    display: flex;
+    justify-content: flex-end;
+}
+#footer> div {
+    display: flex;
+    width: 22%;
+    align-items: center;
+    line-height: 0;
+    justify-content: space-between;
+    height: 40px;
+    text-align: center;
+}
+#footer div a {
+    transition: 1s;
+    text-align: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin-top: 70px;
+    line-height: 0;
+    border: 1.75px solid var(--green);
+    border-radius: 4px;
+    height: 100%;
+    width: 20%;
+    color: var(--green);
+}
+#footer div a:hover, #projects div div:last-child a:last-child:hover {
+    transition: 0.5s;
+    background-color: var(--green);
+    color: var(--backgrounddiv);
+}   
+
+#footer div a.active {
+    transition: 1s;
+    background-color: var(--green);
+    color: var(--backgrounddiv);
+}
+#footer div a.active:hover {
+    transition: 0.5s;
+    background-color: var(--background);
+    color: var(--green);
+}   
+#projects div div:last-child a:first-child:hover  {
+    transition: 0.5s;
+    background-color: var(--backgrounddiv);
+    color: var(--green);
 }
 
-#projects2 {
+.pageinactive {
     display: none;
-    flex-wrap: wrap;    
 }
 
-#erecipe, #recipe, #gallery {
-    padding: 20px;
-    background-color: white;
-    border-radius: 12px;
+
+a {
+    text-decoration: none;
 }
 
-body #consultant h1 {
-    font-size: 1.3em;
-}
 
-#consultant, .div2 {
-    background-color: #FFFFFF;
-    border-radius: 12px;
-}
-
-#myteampage {
-    margin-top: 7%;
-}
-
-#azerty {
+#scroll, #scrolldeux {
     position: absolute;
     top: 0;
     left: 0;
 }
-
-
-
-
-
-
-
-
 footer {
     font-family: 'Montserrat';
     font-size: 14px;
@@ -681,4 +488,112 @@ footer {
     padding-left: 3px;
     padding-right: 3px;
     color: #BDBDBD;
+}
+
+@media screen and (max-width: 820px) {
+    main {
+        display: grid;
+        width: 80%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3.0fr 1.6fr 2.5fr 8fr 4fr 0.7fr;
+        grid-template-areas: 
+        "profil"
+        "competence"
+        "blog"
+        "hobbie"
+        "experience"
+        "filter"
+        ;
+    }
+
+    #profil {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #blocinfo {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #blocinfo > div:first-child {
+        margin: 5px;
+    }
+    #profil p {
+        margin-top: 20px;
+    }
+    #informationperso {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 0;
+        position: relative;
+        right: 24px;
+        margin-top: 10px;
+    }
+    #blog #topblog img {
+        margin-bottom: 20px;
+    }
+    #blog p {
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 620px) {
+    main {
+     grid-template-rows: 3.0fr 1.6fr 2.5fr 7fr 3fr 0.7fr;
+     gap: 35px;
+    }
+}
+@media screen and (max-width: 490px){
+    main {
+        grid-template-rows: 3fr 1.6fr 2.5fr 5fr 2.5fr 0.7fr;
+    }
+    #profil {
+        padding: 20px 10px 20px 10px;
+    }
+}
+@media screen and (max-width: 390px) {
+    main {
+        width: 95%;
+    }
+}
+@media screen and (max-width: 360px) {
+    main {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 345px) {
+    main {
+        width: 315px;
+        margin: 30px auto;
+    }
+    main>div {
+        width: 315px;
+    }
+    #profil #informationperso div {
+        font-size: 0.9em;
+    }
+}
+@media screen and (max-width: 315px) {
+    main {
+        width: 290px;
+        grid-template-rows: 3fr 1.6fr 2.5fr 4.5fr 2.5fr 0.9fr;
+    }
+    main>div {
+        width: 290px;
+    }
+    #profil #textinfo {
+        font-size: 13px;
+    }
+    #button {
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    footer {
+        font-size: 0.7em;
+    }
+    #lien {
+        font-size: 1em;
+    }
 }
