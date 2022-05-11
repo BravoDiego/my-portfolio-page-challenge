@@ -353,7 +353,7 @@ main>*, #projects>*, #projectstwo>*{
 }
 #projects div div:first-child img, #projectstwo div div:first-child img {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 6px;
 }
 #projects div div:first-child p, #projectstwo div div:first-child p {
     font-weight: 500;
