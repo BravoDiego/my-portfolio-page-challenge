@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head id="head">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="icon" href="src/devchallenges.png">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="scroll"></div>
@@ -24,8 +24,8 @@
                       <div id="numtel"><ion-icon name="call"></ion-icon>+33 ** ** ** ** **</div>
                   </div>
              </div>
-                 <p>Young responsive developer, 
-                     self-taught and very cheerful. Curious, 
+                 <p>Young responsive developer,
+                     self-taught and very cheerful. Curious,
                      motivated, kind, and social define me well.
                      <br><br>
                   ✨French<br>
@@ -43,14 +43,12 @@
             <ul>
               <li>HTML <div><hr></div></li>
               <li>CSS <div><hr></div></li>
-              <li>Javascript <div><hr></div></li>
-              <li>C++ <div><hr></div></li>
+              <li>Python <div><hr></div></li>
               <li>C <div><hr></div></li>
-              <li>Blender <div><hr></div></li>
+              <li>C++ <div><hr></div></li>
+              <li>Javascript <div><hr></div></li>
             </ul>
         </div>
-       </div>
-
 
 
 
@@ -62,11 +60,11 @@
                </div>
                <img src="src/css_photo.jpg" alt="css">
            </div>
-           <p>  In this article I tell the story about Proin eu justo 
+           <p>  In this article I tell the story about Proin eu justo
                 sit amet lacus bibendum tincidunt. Vivamus non volutpat nisl,
                 a luctus mi.<br><br>
 
-                Donec aliquam est dui, vel vestibulum diam sollicitudin id. 
+                Donec aliquam est dui, vel vestibulum diam sollicitudin id.
                 Quisque feugiat malesuada molestie.
             </p>
             <a href="#scroll">bravodiego.blog</a>
@@ -82,13 +80,13 @@
           <h2>Botanical</h2>
           <p>Quisque feugiat malesuada molestie.</p>
         </div>
-  
+
         <div id="gaming">
           <img src="src/dev.jpg" alt="gaming">
           <h2>Developement</h2>
           <p>Quisque feugiat malesuada molestie.</p>
         </div>
-  
+
         <div id="jeu">
           <img src="src/jeu.jpg" alt="jeu">
           <h2>Playing</h2>
@@ -97,14 +95,9 @@
        </div>
 
 
-
-
-
-
-
        <div id="experience">Experiences
            <div id="projectexperience">
-            
+
                <div id="dev">
                 <img src="src/dev.jpeg" alt="dev">
                 <div id="infodev">
@@ -138,7 +131,7 @@
    </main>
 
    <div id="projects">
-       <div id="error page">
+       <div id="error_page">
            <div>
                <img src="src/Projects/404-page.PNG" alt="Projects 404 page error">
                <p>#HTML #CSS #RESPONSIVE</p>
@@ -153,7 +146,7 @@
            </div>
        </div>
 
-       <div id="recipe page">
+       <div id="recipe_page">
         <div>
             <img src="src/Projects/recipe-page.PNG" alt="Recipe page">
             <p>#HTML #CSS #RESPONSIVE</p>
@@ -168,7 +161,7 @@
         </div>
     </div>
 
-    <div id="my gallery page">
+    <div id="my_gallery_page">
         <div>
             <img src="src/Projects/my-gallery.PNG" alt="my gallery page">
             <p>#HTML #CSS #RESPONSIVE</p>
@@ -187,7 +180,7 @@
    </div>
 
    <div id="projectstwo" style="display: none;">
-    <div id="checkout page">
+    <div id="checkout_page">
         <div>
             <img src="src/Projects/checkout-page.PNG" alt="checkout page">
             <p>#HTML #CSS #RESPONSIVE #JAVASCRIPT</p>
@@ -203,7 +196,7 @@
     </div>
 
 
-    <div id="edie homepage">
+    <div id="edie_homepage">
         <div>
             <img src="src/Projects/edie-page.PNG" alt="edie hompage">
             <p>#HTML #CSS #RESPONSIVE</p>
@@ -218,7 +211,7 @@
         </div>
     </div>
 
-    <div id="interior consultant">
+    <div id="interior_consultant">
         <div>
             <img src="src/Projects/interior-consultant.PNG" alt="interior">
             <p>#HTML #CSS #RESPONSIVE #JAVASCRIPT</p>
@@ -233,7 +226,7 @@
         </div>
     </div>
 
-    <div id="team page">
+    <div id="team_page">
         <div>
             <img src="src/Projects/team-page.PNG" alt="interior">
             <p>#HTML #CSS #RESPONSIVE</p>
@@ -248,9 +241,9 @@
         </div>
     </div>
 
-    <div id="do you like">
+    <div id="do_you_like">
         <div>
-            <img src="src/Projects/Do you like.JPG" alt="interior">
+            <img src="src/Projects/Do_you_like.JPG" alt="interior">
             <p>#HTML #CSS #RESPONSIVE #JAVASCRIPT</p>
         </div>
         <div>
@@ -279,6 +272,50 @@
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="style/app.js"></script>
+    <script>
+        var btnOne = document.querySelector("#un");
+        var btnTwo = document.querySelector("#deux");
+        var chevronLeft = document.querySelector("#chevronleft");
+        var chevronRigth = document.querySelector("#chevronrigth");
+
+        var pageOne = document.querySelector("main");
+        var projectsOne = document.querySelector("#projects");
+        var projectsTwo = document.querySelector("#projectstwo");
+
+        var pageActuel = 1;
+
+        btnOne.addEventListener("click", function() {
+            pageActuel = 1;
+            Switch();
+        });
+        btnTwo.addEventListener("click", function() {
+            pageActuel = 2;
+            Switch();
+        });
+        chevronLeft.addEventListener("click", function() {
+            pageActuel = 1;
+            Switch();
+        });
+        chevronRigth.addEventListener("click", function() {
+            pageActuel = 2;
+            Switch();
+        });
+
+        function Switch() {
+            if (pageActuel === 1) {
+                pageOne.style.display = 'grid';
+                projectsOne.style.display = 'grid';
+                projectsTwo.style.display = 'none';
+                btnOne.classList.add("active");
+                btnTwo.classList.remove("active");
+            } else {
+                pageOne.style.display = 'none';
+                projectsOne.style.display = 'none';
+                projectsTwo.style.display = 'grid';
+                btnTwo.classList.add("active");
+                btnOne.classList.remove("active");
+            }
+        }
+    </script>
 </body>
 </html>
