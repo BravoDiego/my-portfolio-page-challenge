@@ -148,10 +148,10 @@ main>*, #projects>*, #projectstwo>*{
     width: 90%;
 }
 #competence li:nth-child(3) div hr {
-    width: 70%;
+    width: 90%;
 }
 #competence li:nth-child(4) div hr {
-    width: 60%;
+    width: 70%;
 }
 #competence li:nth-child(5) div hr {
     width: 55%;
